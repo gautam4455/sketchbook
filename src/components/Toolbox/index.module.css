@@ -16,11 +16,18 @@
     .itemContainer {
       @apply flex justify-between mt-2;
 
+      /* Active fix */
+      .colorBoxActive {
+        @apply h-5 w-5 mr-1 rounded-sm cursor-pointer;
+
+        border: 1px solid theme("colors.border2");
+        box-shadow: theme("colors.shadow2");
+      }
       .colorBox {
         @apply h-5 w-5 mr-1 rounded-sm cursor-pointer;
 
-        &:hover,
-        &:active {
+        /* Active is not working here so created separate class above */
+        &:hover {
           border: 1px solid theme("colors.border2");
           box-shadow: theme("colors.shadow2");
         }
